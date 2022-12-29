@@ -1,0 +1,16 @@
+#nprogress {
+    .bar {
+        background: var(--theme-color-primary) !important;
+    }
+    .peg {
+        box-shadow: 0 0 10px var(--theme-color-primary),
+            0 0 5px var(--theme-color-primary) !important;
+    }
+    .spinner {
+        visibility: hidden;
+    }
+    .spinner-icon {
+        border-top-color: var(--theme-color-primary) !important;
+        border-left-color: var(--theme-color-primary) !important;
+    }
+}

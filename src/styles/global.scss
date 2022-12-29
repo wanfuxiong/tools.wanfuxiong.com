@@ -1,0 +1,67 @@
+@use "theme" as *;
+@use "nprogress" as *;
+
+// 据说可以提高性能
+html {
+    content-visibility: auto;
+    contain-intrinsic-size: 1px 5000px;
+}
+
+* {
+    word-break: break-word;
+}
+
+.flex-children-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flex-children-vertical-center {
+    display: flex;
+    align-items: center;
+}
+
+.flex-children-space-between {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.grid-children-center {
+    display: grid;
+    place-content: center;
+}
+
+.children-margin-center {
+    display: grid;
+    //display: flex;
+    //display: inline-grid;
+    //display: inline-flex;
+
+    & > * {
+        margin: auto;
+    }
+}
+
+.absolute-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.single-line-ellipsis {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.multi-line-ellipsis {
+    overflow: hidden;
+    display: -webkit-box;
+    text-overflow: ellipsis;
+    //-webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+}

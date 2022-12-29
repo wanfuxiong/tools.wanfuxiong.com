@@ -1,0 +1,159 @@
+// https://github.com/element-plus/element-plus/blob/dev/packages/theme-chalk/src/common/var.scss
+
+$--colors: (
+    "primary": (
+        "base": #8e8cd8,
+    ),
+);
+
+$--border-radius: (
+    "base": 8px,
+);
+
+$--font-family: (
+    "": "'Poppins', sans-serif",
+);
+
+$--card: (
+    "border-radius": 16px,
+);
+
+$--dialog: (
+    "border-radius": 16px,
+);
+
+$--popover: (
+    "border-radius": 16px,
+);
+
+$--popper: (
+    "border-radius": 8px,
+);
+
+$--transition-duration: (
+    "": 0.3s,
+    "fast": 0.2s,
+);
+
+$--select-dropdown: (
+    "padding": 12px 0,
+);
+
+$--alert: (
+    "border-radius-base": 16px,
+);
+
+@forward "element-plus/theme-chalk/src/common/var.scss" with (
+    $colors: $--colors,
+    $border-radius: $--border-radius,
+    $font-family: $--font-family,
+    $card: $--card,
+    $dialog: $--dialog,
+    $popover: $--popover,
+    $popper: $--popper,
+    $transition-duration: $--transition-duration,
+    $alert: $--alert //$select-dropdown: $--select-dropdown
+);
+
+@use "dark";
+@use "element-plus/theme-chalk/src/dark/css-vars.scss" as *;
+@use "element-plus/theme-chalk/src/message.scss" as *;
+
+[class^="el-"] {
+    font-family: var(--theme-font-family);
+}
+
+.el-button {
+    transition: var(--el-transition-all);
+}
+
+.el-menu {
+    background-color: transparent;
+    border: none;
+
+    .el-menu-item.is-active {
+        background-color: var(--el-menu-hover-bg-color);
+    }
+
+    .el-sub-menu .el-sub-menu__icon-arrow {
+        position: unset;
+        margin: 0;
+    }
+
+    &.el-menu--popup {
+        border-radius: 16px;
+        //overflow: hidden;
+    }
+}
+
+.el-dropdown-menu {
+    border-radius: 16px;
+}
+
+.el-popper {
+    //overflow: hidden;
+
+    &.el-color-picker__panel.el-color-dropdown {
+        padding: 16px 16px 12px 16px;
+    }
+
+    &.el-dropdown__popper {
+        //overflow: hidden;
+    }
+
+    .el-dropdown-menu {
+        overflow: hidden;
+    }
+
+    .el-select-dropdown {
+        .el-select-dropdown__wrap {
+            border-radius: 16px;
+            //overflow: hidden;
+        }
+    }
+}
+
+.el-dialog {
+    //display: flex;
+    //flex-direction: column;
+    //margin: 0 !important;
+    //position: absolute;
+    //top: 50%;
+    //left: 50%;
+    //transform: translate(-50%, -50%);
+    //max-height: calc(100% - 30px);
+    max-width: calc(100% - 30px);
+    --el-dialog-width: 30%;
+
+    .el-dialog__body {
+        //padding: calc(var(--el-dialog-padding-primary) + 10px)
+        //    calc(var(--el-dialog-padding-primary) - 16px);
+
+        & > .el-scrollbar > .el-scrollbar__wrap {
+            max-height: calc(90vh - 200px);
+            padding: 0 16px;
+        }
+    }
+}
+
+.el-form {
+    .el-form-item {
+        &:last-child {
+            margin-bottom: unset;
+        }
+
+        .el-select {
+            width: 100%;
+        }
+    }
+}
+
+.el-alert {
+    .el-alert__title {
+        line-height: 24px;
+    }
+}
+
+.el-switch {
+    line-height: normal;
+}

@@ -1,0 +1,12 @@
+.copy-text {
+    margin-top: 8px;
+    cursor: pointer;
+    word-break: break-word;
+    border-radius: var(--el-border-radius-base);
+    padding: 8px;
+    transition: var(--el-transition-all);
+
+    &:hover {
+        background: var(--transparent-bg-color);
+    }
+}

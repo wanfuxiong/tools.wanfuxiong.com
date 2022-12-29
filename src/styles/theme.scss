@@ -1,0 +1,84 @@
+:root {
+    --theme-color-primary: rgba(142, 140, 216, 1);
+    --theme-fill-color-blank: #ffffff;
+    --gaussian-blur-color: rgba(0, 0, 0, 0.05);
+    --gaussian-blur-hover-color: rgba(0, 0, 0, 0.1);
+    --linear-gradient-background: linear-gradient(
+        to left top,
+        var(--theme-color-primary),
+        #dddddd
+    );
+    --transparent-bg-color: rgba(0, 0, 0, 0.05);
+    --transparent-bg-color-dark: rgba(0, 0, 0, 0.1);
+    --transparent-border-color: rgba(255, 255, 255, 0.6);
+    --avatar-shadow-color: rgba(0, 0, 0, 0.1);
+
+    --theme-font-family: "Poppins", sans-serif;
+    --theme-font-size: 14px;
+
+    &.dark {
+        --theme-color-primary: rgba(105, 104, 157, 1);
+        --theme-fill-color-blank: rgba(18, 18, 18, 1);
+        --gaussian-blur-color: rgba(0, 0, 0, 0.1);
+        --gaussian-blur-hover-color: rgba(0, 0, 0, 0.2);
+        --linear-gradient-background: linear-gradient(
+            to left top,
+            #222222,
+            var(--theme-color-primary)
+        );
+        --transparent-bg-color: rgba(255, 255, 255, 0.1);
+        --transparent-bg-color-dark: rgba(255, 255, 255, 0.2);
+        --transparent-border-color: rgba(255, 255, 255, 0.5);
+        --avatar-shadow-color: rgba(255, 255, 255, 0.2);
+    }
+}
+
+/**
+ 其它
+ */
+header {
+}
+
+html {
+    background: var(--theme-fill-color-blank);
+    font-family: var(--theme-font-family);
+    font-size: var(--theme-font-size);
+}
+
+body {
+    min-width: 320px;
+}
+
+::-moz-selection {
+    color: white;
+    background-color: var(--theme-color-primary);
+}
+
+::-webkit-selection {
+    color: white;
+    background-color: var(--theme-color-primary);
+}
+
+::selection {
+    color: white;
+    background-color: var(--theme-color-primary);
+}
+
+a {
+    border-bottom: 1px dotted currentColor;
+    transition: var(--el-transition-all);
+
+    &:hover {
+        color: var(--theme-color-primary);
+        border-bottom: 1px dotted transparent;
+    }
+}
+
+.hljs {
+    font-family: Consolas, Monaco, monospace;
+}
+
+// dat.gui的控制面板位于最上层
+.dg.ac {
+    z-index: 999 !important;
+}

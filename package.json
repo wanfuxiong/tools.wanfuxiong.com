@@ -1,0 +1,40 @@
+{
+    "name": "tools",
+    "version": "0.0.1",
+    "license": "GPL-3.0",
+    "author": {
+        "name": "万福熊",
+        "email": "wanfuxiong@wanfuxiong.com",
+        "url": "https://github.com/wanfuxiong/tools"
+    },
+    "description": "Some Tools",
+    "scripts": {
+        "dev": "vite --host",
+        "build": "vue-tsc --noEmit && vite build",
+        "preview": "vite preview"
+    },
+    "dependencies": {
+        "element-plus": "^2.2.19",
+        "md5": "^2.3.0",
+        "nprogress": "^0.2.0",
+        "tesseract.js": "^4.0.2",
+        "vue": "^3.2.41",
+        "vue-router": "^4.1.6"
+    },
+    "devDependencies": {
+        "@types/md5": "^2.3.2",
+        "@types/node": "^18.11.5",
+        "@types/nprogress": "^0.2.0",
+        "@typescript-eslint/eslint-plugin": "^5.46.0",
+        "@typescript-eslint/parser": "^5.46.0",
+        "@vitejs/plugin-vue": "^3.1.2",
+        "eslint": "^8.26.0",
+        "eslint-plugin-vue": "^9.6.0",
+        "prettier": "^2.8.1",
+        "sass": "^1.55.0",
+        "terser": "^5.15.1",
+        "typescript": "^4.9.4",
+        "vite": "^3.1.8",
+        "vue-tsc": "^1.0.9"
+    }
+}
