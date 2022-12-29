@@ -2,10 +2,8 @@
     <div>
         <el-input v-model="inputValue" clearable />
         <div>
-            <el-button
-                @click="imageSrc = inputValue"
-                style="margin-top: 12px"
-                >{{ $t(`confirm`) }}</el-button
+            <el-button @click="imageSrc = inputValue" style="margin-top: 12px"
+                >确定</el-button
             >
         </div>
         <el-image

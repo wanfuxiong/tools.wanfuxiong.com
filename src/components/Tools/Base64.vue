@@ -14,7 +14,6 @@
 <script setup lang="ts">
 import { computed, ref } from "vue";
 import { ElMessage } from "element-plus";
-import i18n from "@/i18n";
 import { copyText } from "@/utils/copy";
 
 const base64Input = ref("");
