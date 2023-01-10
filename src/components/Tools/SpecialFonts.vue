@@ -1,19 +1,21 @@
 <template>
     <div>
         <el-input v-model="value" />
-        <div>{{ value1 }}</div>
-        <div>{{ value2 }}</div>
-        <div>{{ value3 }}</div>
-        <div>{{ value4 }}</div>
-        <div>{{ value5 }}</div>
-        <div>{{ value6 }}</div>
-        <div>{{ value7 }}</div>
-        <div>{{ value8 }}</div>
+        <el-card
+            v-for="(v, i) in values"
+            :key="i"
+            shadow="hover"
+            @click="copyText(v)"
+            style="margin-top: 12px; user-select: none"
+        >
+            {{ v }}
+        </el-card>
     </div>
 </template>
 
 <script setup lang="ts">
 import { computed, ref } from "vue";
+import { copyText } from "@/utils/copy";
 
 const baseNumber = "0123456789";
 const baseLetter = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
@@ -646,6 +648,17 @@ const value8 = computed(() => {
     });
     return result;
 });
+
+const values = computed(() => [
+    value1.value,
+    value2.value,
+    value3.value,
+    value4.value,
+    value5.value,
+    value6.value,
+    value7.value,
+    value8.value,
+]);
 </script>
 
 <style scoped lang="scss"></style>
