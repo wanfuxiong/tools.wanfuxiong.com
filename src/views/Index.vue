@@ -22,13 +22,8 @@
     </div>
 </template>
 
-<script>
-import { defineComponent } from "vue";
+<script setup lang="ts">
 import RightTopTag from "@/components/RightTopTag.vue";
-
-export default defineComponent({
-    components: { RightTopTag },
-});
 </script>
 
 <style scoped lang="scss">
