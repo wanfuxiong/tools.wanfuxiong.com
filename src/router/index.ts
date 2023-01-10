@@ -17,6 +17,11 @@ const routes: Array<RouteRecordRaw> = [
         path: "/screen-recording",
         component: () => import("@/views/ScreenRecording.vue"),
     },
+    {
+        name: "SpecialFonts",
+        path: "/special-fonts",
+        component: () => import("@/views/SpecialFonts.vue"),
+    },
 ];
 
 const router = createRouter({
