@@ -614,35 +614,35 @@ const value3 = computed(() => {
 const value4 = computed(() => {
     let result = "";
     value.value.split("").forEach((c) => {
-        result += baseMap4[c] || "";
+        result += baseMap4[c] || c;
     });
     return result;
 });
 const value5 = computed(() => {
     let result = "";
     value.value.split("").forEach((c) => {
-        result += baseMap5[c] || "";
+        result += baseMap5[c] || c;
     });
     return result;
 });
 const value6 = computed(() => {
     let result = "";
     value.value.split("").forEach((c) => {
-        result += baseMap6[c] || "";
+        result += baseMap6[c] || c;
     });
     return result;
 });
 const value7 = computed(() => {
     let result = "";
     value.value.split("").forEach((c) => {
-        result += baseMap7[c] || "";
+        result += baseMap7[c] || c;
     });
     return result;
 });
 const value8 = computed(() => {
     let result = "";
     value.value.split("").forEach((c) => {
-        result += baseMap8[c] || "";
+        result += baseMap8[c] || c;
     });
     return result;
 });
