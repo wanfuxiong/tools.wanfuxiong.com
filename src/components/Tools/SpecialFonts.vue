@@ -1,15 +1,21 @@
 <template>
     <div>
-        <el-input v-model="value" />
-        <el-card
-            v-for="(v, i) in values"
-            :key="i"
-            shadow="hover"
-            @click="copyText(v)"
-            style="margin-top: 12px; user-select: none"
-        >
-            {{ v }}
-        </el-card>
+        <el-input
+            v-model="value"
+            placeholder="请输入英文或数字"
+            clearable
+            size="large"
+        />
+        <template v-for="(v, i) in values" :key="i">
+            <el-card
+                v-if="v"
+                shadow="hover"
+                @click="copyText(v)"
+                style="margin-top: 12px; user-select: none; border-radius: 8px"
+            >
+                {{ v }}
+            </el-card>
+        </template>
     </div>
 </template>
 
