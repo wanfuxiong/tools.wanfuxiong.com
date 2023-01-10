@@ -5,11 +5,14 @@
             class="flex-children-center"
             style="flex-wrap: wrap"
         >
-            <router-link to="/ocr">OCR</router-link>
-            <router-link to="/screen-recording">录屏</router-link>
+            <router-link to="/ocr"
+                >OCR<RightTopTag>仅适用电脑</RightTopTag></router-link
+            >
+            <router-link to="/screen-recording"
+                >录屏<RightTopTag>仅适用电脑</RightTopTag></router-link
+            >
             <router-link to="/special-fonts">特殊字体</router-link>
         </div>
-        <p>录屏功能仅在电脑生效</p>
         <a
             href="https://www.wanfuxiong.com"
             target="_blank"
@@ -19,7 +22,14 @@
     </div>
 </template>
 
-<script setup lang="ts"></script>
+<script>
+import { defineComponent } from "vue";
+import RightTopTag from "@/components/RightTopTag.vue";
+
+export default defineComponent({
+    components: { RightTopTag },
+});
+</script>
 
 <style scoped lang="scss">
 #index {
@@ -29,11 +39,12 @@
 
     #box-wrapper {
         a {
+            position: relative;
             display: inline-block;
             width: 120px;
             height: 120px;
             border-radius: 20px;
-            background: #eee;
+            background: var(--el-fill-color);
             border: none;
             line-height: 120px;
             text-align: center;
@@ -42,7 +53,7 @@
             transition: var(--el-transition-all);
 
             &:hover {
-                background: #8e8cd8;
+                background: var(--el-fill-color-darker);
             }
         }
     }
